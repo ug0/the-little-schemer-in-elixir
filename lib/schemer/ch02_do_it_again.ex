@@ -1,5 +1,5 @@
 defmodule Schemer.DoItAgain do
-  import Schemer.Toys, only: [atom?: 1]
+  import Schemer.Primitive, only: [atom?: 1]
 
   def lat?([]), do: true
   def lat?([h | t]) when atom?(h), do: lat?(t)

@@ -2,7 +2,7 @@ defmodule Schemer.ToysTest do
   use ExUnit.Case
   doctest Schemer.Toys
 
-  import Schemer.Toys, only: [car: 1, cdr: 1, cons: 2, null?: 1, eq?: 2, atom?: 1]
+  import Schemer.Toys
 
   test "car" do
     assert car([1, 2, 3]) == 1
@@ -28,12 +28,5 @@ defmodule Schemer.ToysTest do
   test "eq?" do
     assert eq?(:a, :a)
     refute eq?(:a, :b)
-  end
-
-  test "atom?" do
-    assert atom?(:a)
-    assert atom?(1)
-    refute atom?([])
-    refute atom?([1, 2])
   end
 end

@@ -40,10 +40,4 @@ defmodule Schemer.Toys do
   """
   def eq?(a, a) when is_atom(a), do: true
   def eq?(a, b) when is_atom(a) and is_atom(b), do: false
-
-  defmacro atom?(a) do
-    quote do
-      is_atom(unquote(a)) or is_integer(unquote(a))
-    end
-  end
 end
