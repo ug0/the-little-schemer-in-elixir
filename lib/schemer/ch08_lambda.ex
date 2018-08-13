@@ -166,7 +166,6 @@ defmodule Schemer.Lambda do
   def evens_only_star([h | t]), do: cons(evens_only_star(h), evens_only_star(t))
 
   def evens_only_star_and_co([], col), do: col.([], 1, 0)
-
   def evens_only_star_and_co([n | t], col) when number?(n) do
     cond do
       even?(n) ->
@@ -180,7 +179,6 @@ defmodule Schemer.Lambda do
         end)
     end
   end
-
   def evens_only_star_and_co([h | t], col) do
     evens_only_star_and_co(h, fn al, ap, as ->
       evens_only_star_and_co(t, fn dl, dp, ds ->
