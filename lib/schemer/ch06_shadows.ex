@@ -39,7 +39,7 @@ defmodule Schemer.Shadows do
     end
   end
 
-  defp operator(aexp), do: car(cdr(aexp))
-  defp first_sub_exp(aexp), do: car(aexp)
-  defp second_sub_exp(aexp), do: car(cdr(cdr(aexp)))
+  def operator(aexp), do: car(cdr(aexp))
+  def first_sub_exp(aexp), do: car(aexp)
+  def second_sub_exp(aexp), do: car(cdr(cdr(aexp)))
 end
