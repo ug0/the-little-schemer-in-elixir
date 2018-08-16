@@ -56,7 +56,7 @@ defmodule Schemer.FriendsAndRelations do
 
   def revrel([]), do: []
   def revrel([pair | rel]), do: cons(revpair(pair), revrel(rel))
-  defp revpair(pair), do: build(second(pair), first(pair))
+  def revpair(pair), do: build(second(pair), first(pair))
 
   def fullfun?(rel), do: set?(seconds(rel))
   def seconds([]), do: []
